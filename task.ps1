@@ -47,10 +47,8 @@ $Params = @{
     Publisher          = 'Microsoft.Azure.Extensions'
     ExtensionType      = 'CustomScript'
     TypeHandlerVersion = '2.1'
-    ProtectedSettings  = @{
-        fileUris = @('https://raw.githubusercontent.com/AndS9/azure_task_12_deploy_app_with_vm_extention/main/install-app.sh')
-        commandToExecute = 'sudo chmod +x ./install-app.sh && sudo ./install-app.sh'
-    }
+    fileUris = 'https://raw.githubusercontent.com/AndS9/azure_task_12_deploy_app_with_vm_extention/main/install-app.sh'
+    commandToExecute = 'sudo chmod +x ./install-app.sh && sudo ./install-app.sh'
 }
 
 Set-AzVMExtension @Params
